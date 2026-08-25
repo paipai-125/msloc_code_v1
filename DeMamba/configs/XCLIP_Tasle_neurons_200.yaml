@@ -1,0 +1,25 @@
+model: 'XCLIP_NeuronDeMamba_4'
+save_dir: '../MSLoc_data/DeMamba/benchmark_200/method/results'
+neuron_indices_path: '../MSLoc_data/DeMamba/benchmark_200/method/neuron_probe/xclip_neuron_indices.json'
+
+tuning_mode: 'lp'
+task: 'many2many'
+xclip_model_path: '../MSLoc_data/DeMamba/pretrained_weights/xclip-base-patch16'
+
+max_epoch: 10
+bath_per_epoch: 1000
+train_batch_size: 32
+val_batch_size: 32
+num_workers: 32
+lr: 0.000001
+
+train_json_path: '../MSLoc_data/DeMamba/benchmark_200/train_200.json'
+test_json_path: '../MSLoc_data/DeMamba/benchmark_200/test_200.json'
+dataset_base_path: '../MSLoc_data/DeMamba/video_frames'
+window_length: 2.0
+frames_per_window: 8
+mode: 'four_class'
+transform_config: {
+  crop_youku: True,
+  normalization: 'clip'
+}
