@@ -1,7 +1,4 @@
-
-
-
-# 冯越小模型实验部分如下
+# 小模型实验部分如下
 python DeMamba/train.py \
   --config ../MSLoc_data/DeMamba/full/configs/xclip_neurons_full.yaml \
   --device-ids 0,1,2,3,4,5,6,7 \
